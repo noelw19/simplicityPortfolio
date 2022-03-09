@@ -1,7 +1,9 @@
 .contentContainer {
     width: 100vw;
     height: auto;
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .technologies {
@@ -140,7 +142,7 @@
 }
 
 .bioText {
-    width: 70%;
+    width: 90%;
     height: auto;
 
 }

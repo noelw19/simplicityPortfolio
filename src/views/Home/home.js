@@ -86,9 +86,13 @@ export const Home = () => {
                         <p>I have a deep passion for javascript and the things it has allowed me to learn. Javascript has broadened my knowledge in ways and areas I could never have imagined such as:</p> 
                         <ul>
                             <li>Developing dynamic websites and simple games with vanilla JS</li>
+                            <br/>
                             <li>Using frontend technologies such as ReactJS, Redux, React-Router, TailwindsCss to name a few. </li>
+                            <br/>
                             <li>Building REST api's using NodeJS, ExpressJS and cors, using node to create child processes that run python code for webscraping and piping the results to Node for processing.</li>
+                            <br/>
                             <li>Toying with arduino using the johnny five JS library setting up a simple website that runs commands from a website through websockets to execute predefined functions and retrieve updated data for the UI.</li>
+                            <br/>
                             <li>Using my Javascript knowledge to help me with the art of web application penetration testing and ethical hacking with hopes to progress my skills and secure my web application code through experience of exploits.</li>
 
                         </ul>

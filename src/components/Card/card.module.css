@@ -4,15 +4,24 @@
     /* background: var(--orange); */
     padding-top: 0.2rem;
     padding-bottom: 1rem;
+    padding: 10px;
     border-radius: 15px;
     border: 3px solid var(--orange);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.cardParent p {
+    color: white;
 }
 
 .flex {
     display: flex;
-
-    padding-left: 2rem;
-    
+    justify-content: center;
+    text-align: left;
 }
 
 .cardParent > h3 {
@@ -24,7 +33,7 @@
 }
 
 .cardParent > img {
-    width: 50%;
+    width: 80%;
     height: auto;
     border-radius: 15px;
     border: 3px solid var(--orange);

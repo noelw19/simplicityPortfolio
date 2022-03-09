@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import styles from './card.module.css';
+import React from 'react';
+// import styles from './card.module.css';
 import './index.css'
 
 

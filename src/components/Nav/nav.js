@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import './index.css';
+
 
 
 export const Nav = () => {
@@ -79,9 +80,19 @@ export const Nav = () => {
         })
     })
 
+    const location = useLocation();
+    let RedirectHome = () => {
+        console.log(location.pathname)
+        if(location.pathname !== '/') {window.location.href = '/';}
+        else {
+            console.log('already on home')
+
+        }
+    }
+
     return (
         <div className="navBarParent fullWidth">
-            <div className='navLogo'>
+            <div className='navLogo' onClick={() => {RedirectHome();}}>
                 <div className='logo'></div>  
                 <p>Noel Williams</p>  
             </div>

@@ -1,0 +1,63 @@
+.cardParent {
+    width: 20%;
+    margin: 1rem;
+    /* background: var(--orange); */
+    padding-top: 0.2rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+    border: 3px solid var(--orange);
+}
+
+.flex {
+    display: flex;
+
+    padding-left: 2rem;
+    
+}
+
+.cardParent > h3 {
+    background: var(--orange);
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 50px
+}
+
+.cardParent > img {
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid var(--orange);
+
+}
+
+.cardParent > p {
+    text-align: left;
+    color: white;
+}
+
+.cardValText {
+    font-size: .7rem;
+    align-self:center;
+}
+
+@media only screen and (max-width: 900px) {
+    .cardParent {
+        width: 40%;
+    }
+
+    .cardValText {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .cardParent {
+        width: 85%;
+    }
+
+    .cardValText {
+        font-size: 1rem;
+    }
+}

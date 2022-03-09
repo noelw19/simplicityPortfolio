@@ -1,0 +1,138 @@
+.contentContainer {
+    width: 100vw;
+    height: auto;
+    
+}
+
+.technologies {
+    width: 100%;
+    height: 10vh;
+    background: var(--orange);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.js {
+    background: url('../../images/jsImage') no-repeat;
+}
+.react {
+    background: url('../../images/reactIcon') no-repeat;
+}
+.api {
+    background: url('../../images/api') no-repeat;
+}
+.styledC {
+    background: url('../../images/styledComponents') no-repeat;
+}
+.py {
+    background: url('../../images/pythonIcon') no-repeat;
+}
+.node {
+    background: url('../../images/nodeJs') no-repeat;
+}
+.html {
+    background: url('../../images/html') no-repeat;
+}
+.css {
+    background: url('../../images/css') no-repeat;
+}
+
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    animation: IconShuffleLeft 10s infinite;
+}
+
+
+
+/* .:hover {
+    animation-play-state: paused;
+} */
+
+@keyframes IconShuffleLeft {
+    0% {
+        transform: translateX(60vw);
+    }
+    100% {
+        transform: translateX(-65vw);
+
+    }
+}
+
+@keyframes IconShuffleRight {
+    0% {
+        transform: translateX(500px);
+
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.lightGrey {
+    color: lightGrey;
+}
+
+.topTitle {
+    display: flex;
+    justify-content: space-around;
+}
+
+.topTitle > h2 {
+    align-self: center;
+}
+
+.bioContainer {
+    color: white;
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 650px) {
+    .bioContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+}
+
+.bioText {
+    width: 70%;
+    height: auto;
+
+}
+
+.bioText > p, .bioText > ul > li {
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.imageContainer {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url('./image.jpeg') no-repeat;
+    background-size: cover;
+}

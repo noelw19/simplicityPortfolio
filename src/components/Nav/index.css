@@ -1,0 +1,119 @@
+.navBarParent {
+    display: flex;
+    justify-content:space-between
+}
+
+.navLogo {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.navLogo > p {
+    font-size: 1.5rem;
+    color: lightGrey;
+}
+
+.logo {
+    width: 3.5rem;
+    height: 2.5rem;
+    background: url('../../../public/bishop.png');
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+}
+
+.navBarParent > .navLinkContainer > ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    /* justify-content: ; */
+}
+
+.navLink{
+    text-decoration: none;
+    color: #FF4C29;
+    padding: .8rem;
+}
+
+.hamburgMenu {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    z-index: 5;
+
+
+}
+
+.menuLine {
+    width: 100%;
+    border: 1px solid black;
+    margin: 2px;
+}
+
+.navBarParent > .navLinkContainer {
+    z-index: 5;
+}
+
+.cover {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    position: absolute;
+    background: grey;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .hamburgMenu {
+        position: absolute;
+        top: -50px;
+    }
+
+    .navBarParent > .navLinkContainer > ul{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navBarParent > .navLinkContainer {
+        position: absolute;
+        margin-top: 0px;
+        right: -30%;
+        height: 100vh;
+        display:none;
+    }
+
+    .navBarParent > .navLinkContainer > ul {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 0px;
+        padding-top: 4rem;
+        justify-content: flex-start;
+    }
+
+    .navBarParent > .navLinkContainer > ul > li {
+        width: 100%;
+        margin: 10px;
+        text-align: left;
+    }
+    
+    .hamburgMenu {
+        display: flex;
+    }
+
+
+}

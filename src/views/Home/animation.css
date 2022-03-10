@@ -128,22 +128,6 @@
     align-items: flex-start;
 }
 
-@media only screen and (max-width: 650px) {
-    .bioContainer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-    }
-
-    .topTitle {
-        flex-direction: column;
-    }
-
-    .icon {
-        animation: none;
-    }
-}
 
 .bioText {
     width: 70%;
@@ -171,4 +155,26 @@
     background: url('../../images/profilePic') no-repeat;
     background-size: cover;
     background-position: 50% 20%;
+}
+
+@media only screen and (max-width: 650px) {
+    .bioContainer {
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .topTitle {
+        flex-direction: column;
+    }
+
+    .icon {
+        animation: none;
+    }
+
+    .bioText {
+        width: 90vw;
+    }
 }

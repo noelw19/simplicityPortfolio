@@ -25,8 +25,8 @@ export const About = () => {
                 <div className='aboutRight'>
                     <p>CONTACT:</p>
                     <p className='contactText'>Email: noelw19@outlook.com</p>
-                    <p className='contactText'>Instagram: Melanesian_28</p>
-                    <p className='contactText'>Blog: Coming soon!</p>
+                    <p className='contactText contactLink' onClick={() => {window.open('https://www.instagram.com/melanesian.28/', '_blank')}}>Instagram: Melanesian_28</p>
+                    <p className='contactText contactLink' onClick={() => {window.open('https://www.linkedin.com/in/noel-williams-1660b1190/', '_blank')}}>LinkedIn: noel-williams</p>
 
                 </div>  
             </div>

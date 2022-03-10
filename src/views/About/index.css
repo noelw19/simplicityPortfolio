@@ -3,7 +3,16 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+    padding-bottom: 1.5rem;
     
+}
+
+.contactLink {
+    cursor: pointer;
+}
+
+.contactLink:hover {
+    color: lightGrey;
 }
 
 .aboutLeft {
@@ -36,4 +45,33 @@
     width: 60%;
     height: auto;
     text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutContainer {
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    .aboutRight {
+        width: 70vw;
+        height: auto;
+        border: 4px solid var(--orange);
+    }
+
+    .aboutLeft {
+        width: 80vw;
+    }
+
+    .contactText {
+        width: 70vw;
+    }
+
+    .whoami1 {
+        width: 90%;
+        height: auto;
+        text-align: left;
+    }
 }

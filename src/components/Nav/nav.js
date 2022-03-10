@@ -101,9 +101,9 @@ export const Nav = () => {
                     <li>
                         <Link className='navLink'to="/">Home</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link className='navLink'to="blog">Learner Blog</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link className='navLink'to="about">About</Link>
                     </li>

@@ -1,0 +1,39 @@
+.aboutContainer {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.aboutLeft {
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    color: lightGrey;
+
+}
+
+.aboutRight {
+    width: 30%;
+    height: 100%;
+    border-top: 4px solid var(--orange);
+    border-left: 4px solid var(--orange);
+    border-bottom: 4px solid var(--orange);
+    padding-left: 1rem;
+    color: var(--orange);
+
+}
+
+.contactText {
+    text-align: left;
+}
+
+.whoami1 {
+    width: 60%;
+    height: auto;
+    text-align: left;
+}

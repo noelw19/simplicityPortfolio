@@ -26,7 +26,7 @@ export class ProjCard extends React.Component {
             <div className='onclickCard cardParent' id='cardFather' onClick={() => {window.open(this.url, '_blank');}}>
                 <h3>{this.name}</h3>
                 <img src={this.img} alt='project view'></img>
-                <div className='flex'><p style={{color: 'var(--orange)', paddingRight: '5px'}}>Tech: </p><p className='cardValText'> {this.tech}</p></div>
+                <div className='flex'><p className='cardValText'> {this.tech}</p></div>
                 <div className='flex'><p className='cardValText'> {this.desc}</p></div>
             </div>
         )

@@ -139,6 +139,10 @@
     .topTitle {
         flex-direction: column;
     }
+
+    .icon {
+        animation: none;
+    }
 }
 
 .bioText {
@@ -164,6 +168,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: url('./image.jpeg') no-repeat;
+    background: url('../../images/profilePic') no-repeat;
     background-size: cover;
+    background-position: 50% 20%;
 }

@@ -5,7 +5,6 @@ import './index.css';
 export const Home = () => {
 
     useEffect(() => {
-        
         let iconTip = {
             js:'Javascript',
             react: 'ReactJs',
@@ -68,10 +67,8 @@ export const Home = () => {
         
     }, [])
 
-
-    return (
-        <div className='routedPageContainer flexCenter'>
-            <div className='contentContainer'>
+    let HomeJSX = () => (
+        <div className='contentContainer'>
                 <div className='topTitle'>
                     <h1 className='devTitle'>Web Developer</h1>
                 </div>
@@ -119,6 +116,11 @@ export const Home = () => {
                     <div className='icon css' id='lastIcon'/>
                 </div>
             </div>
+    )
+
+    return (
+        <div className='routedPageContainer flexCenter' id='homeLoad'>
+            <HomeJSX />
         </div>
     )
 }

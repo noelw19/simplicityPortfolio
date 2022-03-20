@@ -1,6 +1,7 @@
 .navBarParent {
     display: flex;
-    justify-content:space-between
+    justify-content:space-between;
+    /* align-items:center; */
 }
 
 .navLogo {
@@ -8,6 +9,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 0px;
 }
 
 .navLogo > p {
@@ -77,10 +79,24 @@
 }
 
 
+
+.navBarParent > .navLinkContainer > ul > li > .navLink {
+    align-self: center;
+}
+
+
 @media only screen and (min-width: 600px) {
     .hamburgMenu {
         position: absolute;
         top: -50px;
+    }
+
+    .navBarParent > .navLinkContainer > ul > li > .navLink:hover {
+        background-color: var(--orange);
+        border-radius: 15px;
+        position: relative;
+        top: 10px;
+    
     }
 
     .navBarParent > .navLinkContainer > ul{
@@ -112,7 +128,14 @@
         margin: 10px;
         text-align: left;
     }
+
+    .navBarParent > .navLinkContainer > ul > li > .navLink:hover {
+        position: relative;
+        background-color: none !important;
+        left: 10px;
     
+    }
+
     .hamburgMenu {
         display: flex;
     }

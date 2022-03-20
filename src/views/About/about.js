@@ -3,7 +3,7 @@ import './index.css';
 export const About = () => {
     return (
         <div className='routedPageContainer flexCenter'>
-            <h1>My About Page</h1>
+            <h1 className='aboutTitle'>My About Page</h1>
             <div className='aboutContainer'>
                 <div className='aboutLeft'>
                    <div className='leftContainer'>

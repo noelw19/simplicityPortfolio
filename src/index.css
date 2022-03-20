@@ -6,7 +6,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2c394B;
+  /* background-color: #2c394B;
+   */
+   background-image: url('./images/bkgrnd2.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: 50% 20%;
 }
 
 code {
@@ -19,5 +24,6 @@ code {
 }
 
 :root {
-  --orange : #FF4C29;
+  --orange : #3479A5;
+  --mantisGreen: #7BCF7A;
 }

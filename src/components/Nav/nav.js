@@ -12,6 +12,8 @@ export const Nav = () => {
         let navLinkBlock = document.querySelector('.navLinkContainer');
         let cover = document.querySelector('.cover');
 
+        setActive('Home');
+
         let closeMenu = () => {
             navLinkBlock.style.right = '-20rem';
             navLinkBlock.style.display = 'none';
@@ -90,6 +92,16 @@ export const Nav = () => {
         }
     }
 
+    let setActive = (btnName) => {
+        let navLink = document.querySelectorAll('.navLink');
+
+        navLink.forEach(el => {
+            el.classList.remove('activeBtn');
+            el.textContent === btnName && el.classList.add('activeBtn') 
+        })
+
+    }
+
     return (
         <div className="navBarParent fullWidth">
             <div className='navLogo' onClick={() => {RedirectHome();}}>
@@ -99,16 +111,16 @@ export const Nav = () => {
             <div className='navLinkContainer'>
                 <ul>
                     <li>
-                        <Link className='navLink'to="/">Home</Link>
+                        <Link className='navLink' onClick={() => {setActive('Home')}} to="/">Home</Link>
                     </li>
                     {/* <li>
                         <Link className='navLink'to="blog">Learner Blog</Link>
                     </li> */}
                     <li>
-                        <Link className='navLink'to="about">About</Link>
+                        <Link className='navLink' onClick={() => {setActive('About')}} to="about">About</Link>
                     </li>
                     <li>
-                        <Link className='navLink'to="projects">Projects</Link>
+                        <Link className='navLink' onClick={() => {setActive('Projects')}} to="projects">Projects</Link>
                     </li>
                 </ul>
             </div>

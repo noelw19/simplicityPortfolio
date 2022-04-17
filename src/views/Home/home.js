@@ -69,9 +69,9 @@ export const Home = () => {
 
     let HomeJSX = () => (
         <div className='contentContainer'>
-                <div className='topTitle'>
+                {/* <div className='topTitle'>
                     <h1 className='devTitle'>Web Developer</h1>
-                </div>
+                </div> */}
 
                 <div className='bioContainer'>
                     <div className='imageContainer'>
@@ -82,21 +82,10 @@ export const Home = () => {
                             DOB: 19/04/1995
                         </p>
                         <p className='bText'>
-                            A Web Developer in the land of the long white cloud (New Zealand).
+                            A programmer in the land of the long white cloud (New Zealand).
                         </p>
-                        <p className='bText'>I have a deep passion for javascript and the things it has allowed me to learn. Javascript has broadened my knowledge in ways and areas I could never have imagined such as:</p> 
-                        <ul>
-                            <li className='bText'>Developing dynamic websites and simple games with vanilla JS</li>
-                            <br/>
-                            <li className='bText'>Using frontend technologies such as ReactJS, Redux, React-Router, TailwindsCss to name a few. </li>
-                            <br/>
-                            <li className='bText'>Building REST api's using NodeJS, ExpressJS and cors, using node to create child processes that run python code for webscraping and piping the results to Node for processing.</li>
-                            <br/>
-                            <li className='bText'>Toying with arduino using the johnny five JS library setting up a simple website that runs commands from a website through websockets to execute predefined functions and retrieve updated data for the UI.</li>
-                            <br/>
-                            <li className='bText'>Using my Javascript knowledge to help me with the art of web application penetration testing and ethical hacking with hopes to progress my skills and secure my web application code through experience of exploits.</li>
-
-                        </ul>
+                        <p className='bText'>Programmer with 3-4 years experience, developing web apps, desktop apps with javascript, data visualisers with python and javascript, sudoku solver web app, basic smart contract development with the truffle suite, arduino projects in nodeJS with web socket functionality for frontend to send and manipulate the state within the arduino, I am also currently building a MERN stack app with auth0 authentication on the side to hone my nodeJs and mongodb skills.</p>
+                        <p className='bText'>I have a very deep curiousity about the world around me and I am grateful I have found programming because of the variety of things I have learnt because of it, the internet, everyday programs and how they work, electricity, energy, hardware coding with arduino, ethical hacking with capture the flag games to find ways to better protect my devices, programming has completely transformed my life and the way I think.</p>
                     </div>
                     
                 </div>

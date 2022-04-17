@@ -13,17 +13,23 @@ export class ProjCard extends React.Component {
         this.img = image;
     }
 
-    // componentDidMount() {
-    //     let cardParent = document.querySelector('.onclickCard');
-    //     cardParent.addEventListener('click', (e) => {
-    //         console.log(e.target);
-    //         window.open(this.url, '_blank');
-    //     })
-    // }
+    componentDidMount() {
+        let cardParent = document.querySelectorAll('.onclickCard');
+
+        cardParent.forEach(el => {
+            el.classList.add('slide')
+        })
+
+        setTimeout(() => {
+            cardParent.forEach(element => {
+                element.classList.remove('slide');
+            })
+        }, 2000)
+    }
 
     render() {
         return (
-            <div className='onclickCard cardParent slide' id='cardFather' onClick={() => {window.open(this.url, '_blank');}}>
+            <div className='onclickCard cardParent' id='cardFather' onClick={() => {window.open(this.url, '_blank');}}>
                 <h3>{this.name}</h3>
                 <img src={this.img} alt='project view'></img>
                 <div className='flex'><p className='cardValText'> {this.tech}</p></div>

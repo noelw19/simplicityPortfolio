@@ -42,6 +42,15 @@
     padding: .8rem;
 }
 
+.activeBtn {
+    background: white;
+    border-radius: 25px;
+    color: black;
+    pointer-events: none;
+    position: relative;
+    top: 10px;
+}
+
 .hamburgMenu {
     width: 30px;
     height: 30px;
@@ -93,7 +102,7 @@
 
     .navBarParent > .navLinkContainer > ul > li > .navLink:hover {
         background-color: var(--orange);
-        border-radius: 15px;
+        border-radius: 25px;
         position: relative;
         top: 10px;
     
@@ -127,6 +136,8 @@
         width: 100%;
         margin: 10px;
         text-align: left;
+        margin-top: 1rem;
+        margin-left: 1rem;
     }
 
     .navBarParent > .navLinkContainer > ul > li > .navLink:hover {

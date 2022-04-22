@@ -27,3 +27,8 @@
   width: 100;
   height: auto;
 }
+
+.emailText {
+  position: absolute;
+  left: -1000px;
+}

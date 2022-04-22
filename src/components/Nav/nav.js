@@ -1,6 +1,8 @@
 import { Link, useLocation } from "react-router-dom"
 import './index.css';
 
+import copyEmail from '../../utils/copyEmailToClipboard';
+
 import mailIcon from '../../images/mainIcon.png';
 import linkedIn from '../../images/linkedInIcon.png';
 import github from '../../images/githubIcon.png';
@@ -174,10 +176,12 @@ export const Nav = () => {
 
 
             <div className='socialLinks'>
-                <img src={mailIcon} alt='Mail Icon'></img>
-                <img src={instagram} onClick={() => {window.open('https://www.instagram.com/melanesian.28/', '_blank')}} alt='Instagram Icon'></img>
-                <img src={github} alt='Github Icon'></img>
-                <img src={linkedIn} onClick={() => {window.open('https://www.linkedin.com/in/noel-williams-1660b1190/', '_blank')}} alt='LinkedIn Icon'></img>
+                        <img src={mailIcon} onClick={() => {
+                            copyEmail();
+                            }} alt='Mail Icon'></img>
+                        <img src={instagram} onClick={() => {window.open('https://www.instagram.com/melanesian.28/', '_blank')}} alt='Instagram Icon'></img>
+                        <img src={github} onClick={() => {window.open('https://github.com/noelw19', '_blank')}} alt='Github Icon'></img>
+                        <img src={linkedIn} onClick={() => {window.open('https://www.linkedin.com/in/noel-williams-1660b1190/', '_blank')}} alt='LinkedIn Icon'></img>
             </div>
 
 

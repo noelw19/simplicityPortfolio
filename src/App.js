@@ -21,7 +21,7 @@ function App() {
        {/* <Route path='blog' element={<LearnerBlog />} /> */}
 
      </Routes>
-      <p className='emailText'>noelw19@outlook.com</p>
+      <textarea className='emailText'>noelw19@outlook.com</textarea>
     </div>
   );
 }

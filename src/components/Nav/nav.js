@@ -40,7 +40,6 @@ export const Nav = () => {
             let socialCont = document.querySelector('.socialLinks');
             socialCont.style.display = 'none';
             navLinkBlock.style.right = '-20rem';
-            navLinkBlock.style.display = 'none';
             cover.style.display=  'none';
             hamburgLines.forEach((el, index) => {
                 el.style.borderColor = 'white';
@@ -100,21 +99,21 @@ export const Nav = () => {
             }
         })
 
-        let width = window.innerWidth;
+        // let width = window.innerWidth;
 
-            if(width < 760) {
-                navLink.forEach(el => {
-                    el.addEventListener('mouseup', () => {
-                        closeMenu()
-                        menuOpen = false;
-                        console.log('link clicked')
-                    })
-                })
+        //     if(width < 760) {
+        //         navLink.forEach(el => {
+        //             el.addEventListener('mouseup', () => {
+        //                 closeMenu()
+        //                 menuOpen = false;
+        //                 console.log('link clicked')
+        //             })
+        //         })
     
-            } else {
-                navLinkBlock.style.display = 'block';
+        //     } else {
+        //         navLinkBlock.style.display = 'block';
                 
-            }
+        //     }
         
         window.addEventListener('resize', () => {
             let width = window.innerWidth;
@@ -124,12 +123,12 @@ export const Nav = () => {
                 navLinkBlock.style.display = 'none';
                 let socialCont = document.querySelector('.socialLinks');
                 socialCont.style.display = 'none';
-                closeMenu()
+                // closeMenu()
 
                 navLink.forEach(el => {
                     el.addEventListener('mouseup', () => {
-                        closeMenu();
                         menuOpen = false;
+                        closeMenu();
                         console.log('link clicked')
                     })
                 })
@@ -139,7 +138,7 @@ export const Nav = () => {
                 let socialCont = document.querySelector('.socialLinks');
                 socialCont.style.display = 'flex';
                 // closeMenu()
-                menuOpen = false;
+                // menuOpen = false;
     
             }
         })

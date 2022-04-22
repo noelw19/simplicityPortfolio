@@ -5,22 +5,20 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* overflow: hidden; */
-}
-
-.title {
-    color: var(--orange) !important;
-    background: white;
-    padding: 10px;
-    border-radius: 15px;
-    margin: 0px;
+    /* overflow-x: hidden; */
 }
 
 .clickText {
+    display: flex;
     color: var(--orange);
     padding: 10px;
     border-radius:15px;
     background-color:white;
+}
+
+.clickTextContainer {
+    width: 90vw;
+    display: flex;
 
 }
 

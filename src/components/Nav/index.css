@@ -17,6 +17,22 @@
     color: white;
 }
 
+.socialLinks {
+    width:auto;
+    height: auto;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.socialLinks > img {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    
+}
+
 .logo {
     width: 3.5rem;
     height: 2.5rem;
@@ -56,9 +72,10 @@
     height: 30px;
     padding: 10px;
     margin-right: 1rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     cursor: pointer;
     z-index: 5;
 
@@ -67,7 +84,7 @@
 
 .menuLine {
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid white;
     margin: 2px;
 }
 
@@ -94,7 +111,7 @@
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 760px) {
     .hamburgMenu {
         position: absolute;
         top: -50px;
@@ -111,9 +128,15 @@
     .navBarParent > .navLinkContainer > ul{
         display: flex;
     }
+
+    .socialLinks > img:hover {
+        position: relative;
+        top: 10px;
+        
+    }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
     .navBarParent > .navLinkContainer {
         position: absolute;
         margin-top: 0px;
@@ -122,6 +145,22 @@
         display:none;
     }
 
+    .socialLinks {
+        display: none;
+        align-items: center;
+        position: absolute;
+        right: 7%;
+        top: 230px;
+        flex-direction: column;
+        z-index: 10;
+    }
+
+    .socialLinks > img {
+        width: 50px;
+        height: 50px;
+        z-index: 3;
+
+    }
     .navBarParent > .navLinkContainer > ul {
         flex-direction: column;
         height: 100%;
@@ -147,9 +186,19 @@
     
     }
 
-    .hamburgMenu {
-        display: flex;
+    .navLogo > p{
+        font-size: 20px;
     }
+
+    .hamburgMenu {
+        display: flex;   
+    }
+
+    .menuLine {
+        border: 1px solid white;
+    }
+
+
 
 
 }

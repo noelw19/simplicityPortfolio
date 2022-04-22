@@ -79,9 +79,6 @@ export const Home = () => {
                     </div>
                     <div className='bioText'>
                         <p className='bText'>
-                            DOB: 19/04/1995
-                        </p>
-                        <p className='bText'>
                             A programmer in the land of the long white cloud (New Zealand).
                         </p>
                         <p className='bText'>Programmer with 3-4 years experience, developing web apps, desktop apps with javascript, data visualisers with python and javascript, sudoku solver web app, basic smart contract development with the truffle suite, arduino projects in nodeJS with web socket functionality for frontend to send and manipulate the state within the arduino, I am also currently building a MERN stack app with auth0 authentication on the side to hone my nodeJs and mongodb skills.</p>

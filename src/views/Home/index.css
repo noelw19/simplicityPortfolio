@@ -71,6 +71,10 @@
     top:-5px;
     display: flex;
     justify-content: center;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+
 
 
 }
@@ -195,11 +199,14 @@
 }
 
 .imageContainer {
-    width: auto;
-    height: auto;
+    width: 40vw;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
+    padding: 20px;
+
 }
 
 .iconTipText {
@@ -207,8 +214,8 @@
 }
 
 .image {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: url('../../images/profilePic') no-repeat;
     background-size: cover;
@@ -217,7 +224,7 @@
     animation: GrowIn 3s;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
     .bioContainer {
         width: 100vw;
         flex-direction: column;
@@ -234,14 +241,15 @@
         animation: none;
     }
 
+    .imageContainer {
+        padding: 0px;
+        margin: 0px;
+    }
+
     .bioText {
         width: 80vw;
         margin-left: -10%;
-    }
-
-    .image {
-        width: 200px;
-        height: 200px;
+        margin-top: 1rem;
     }
 
     .iconTipText {

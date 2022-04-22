@@ -16,8 +16,9 @@ export const Projects = () => {
 
     return (
         <div className='routedPageContainer flexCenter'>
-            <h1 className={styles.title}>Project Board</h1>
-            <p className={styles.clickText}>Click the project to view the site.</p>
+        <div className={styles.clickTextContainer}>
+                <p className={styles.clickText}>Click the project to view the site.</p>
+            </div>
             <div className={styles.contentContainer}>
                 <ProjCard name='Sudoku Solver' tech={['Js', 'Css', 'Css Keyframes']} desc={sudokuSolverDesc} url='https://lambent-granita-d2c356.netlify.app/' image={sudokuSolver}></ProjCard>
                 <ProjCard name='Cocktail Recipe Finder' tech={['Js', 'React', 'fetch']} desc={cocktailFinder} url='https://suspicious-northcutt-b99321.netlify.app/' image={cocktailRecipe}></ProjCard>

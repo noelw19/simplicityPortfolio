@@ -1,5 +1,5 @@
 .aboutContainer {
-    width: 100vw;
+    width: 90vw;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -24,7 +24,7 @@
 }
 
 .aboutLeft {
-    width: 70%;
+    width: 80%;
     height: auto;
     display: flex;
     justify-content:center;
@@ -43,31 +43,51 @@
     align-items: center;
     flex-direction: column;
     border-radius: 15px;
-    border: 4px solid white;
+    border: 4px solid white;        
     animation: GrowSpin 1s;
+    
 }
 
 .rowTextAbout {
     display: flex;
     width: 80%;
+    flex-direction: column;
+}
+
+.rowTextAbout > p {
+    /* border-bottom: 2px solid white; */
+    padding-top: 1rem;
+    padding-right: 1rem;
+
 }
 
 .rightBox {
-    width: 30%;
+    width: 20%;
     height: 100%;
 }
 
 .aboutRight {
-    border-top: 4px solid white;
-    border-left: 4px solid white;
-    border-bottom: 4px solid white;
+    border: 4px solid white;
     padding-left: 1rem;
     background: var(--orange);
     color: white;
     animation: WideGrowThenHeight 2s;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    /* position: relative;
+    left: 30%; */
+}
 
+.aboutRight > img {
+    width: 40%;
+    cursor: pointer;
+}
 
+.aboutRight > h4 {
+    width: 100%;
 }
 
 .contactText {
@@ -80,7 +100,7 @@
     text-align: left;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 690px) {
     .aboutContainer {
         width: 90vw;
         flex-direction: column;
@@ -89,9 +109,20 @@
     }   
 
     .aboutRight {
-        width: 90vw;
+        width: 83vw;
         height: auto;
-        border: 4px solid var(--orange);
+        border: 4px solid white;
+        display: inline-block;
+        position: static;
+        
+    }
+
+    .aboutRight > img {
+        width: 20%;
+    }
+
+    .rightBox {
+        width: 100%;
     }
 
     .aboutLeft {
@@ -111,6 +142,16 @@
         width: 90%;
         height: auto;
         text-align: left;
+    }
+
+    .rowTextAbout {
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+    .rowTextAbout > p {
+        border: none;
     }
 }
 

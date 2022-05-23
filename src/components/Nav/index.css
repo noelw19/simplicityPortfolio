@@ -162,9 +162,11 @@
         align-items: center;
         position: absolute;
         right: 30%;
-        top: 4rem;
+        top: 5rem;
         flex-direction: column;
         z-index: 10;
+        padding-right: 1rem;
+        border-right: 2px solid white;
     }
 
     .socialLinks > img {
@@ -176,15 +178,16 @@
     .navBarParent > .navLinkContainer > ul {
         flex-direction: column;
         height: 100%;
-        width: 100%;
+        width: 50vw;
         padding-left: 0px;
         margin-top: 0px;
         padding-top: 4rem;
         justify-content: flex-start;
+        align-items: flex-end;
     }
 
     .navBarParent > .navLinkContainer > ul > li {
-        width: 100%;
+        width: 50%;
         margin: 10px;
         text-align: center;
         margin-top: 1rem;

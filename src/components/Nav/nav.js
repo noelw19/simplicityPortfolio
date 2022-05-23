@@ -112,6 +112,7 @@ export const Nav = () => {
         }
 
         socialCont.style.display = 'flex';
+        socialCont.style.right = '40%';
         // navLinkBlock.style.color = 'white';
         navLinkBlock.style.right = '0px';
         navLinkBlock.style.display = 'block';

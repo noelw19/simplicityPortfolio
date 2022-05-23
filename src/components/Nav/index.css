@@ -161,7 +161,7 @@
         display: none;
         align-items: center;
         position: absolute;
-        right: 20%;
+        right: 40%;
         top: 4rem;
         flex-direction: column;
         z-index: 10;
@@ -171,6 +171,8 @@
         width: 50px;
         height: 50px;
         z-index: 3;
+        position: absolute;
+        right: 40%;
 
     }
     .navBarParent > .navLinkContainer > ul {

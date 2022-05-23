@@ -5,15 +5,15 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* overflow-x: hidden; */
+    overflow: visible;
 }
 
 .clickText {
     display: flex;
-    color: var(--orange);
+    color: var(--currentBG);
     padding: 10px;
     border-radius:15px;
-    background-color:white;
+    background-color:var(--currentText);
 }
 
 .clickTextContainer {

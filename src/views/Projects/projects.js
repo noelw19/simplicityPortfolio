@@ -21,9 +21,9 @@ export const Projects = () => {
             </div>
             <div className={styles.contentContainer}>
                 <ProjCard name='Sudoku Solver' tech={['Js', 'Css', 'Css Keyframes']} desc={sudokuSolverDesc} url='https://lambent-granita-d2c356.netlify.app/' image={sudokuSolver}></ProjCard>
-                <ProjCard name='Cocktail Recipe Finder' tech={['Js', 'React', 'fetch']} desc={cocktailFinder} url='https://suspicious-northcutt-b99321.netlify.app/' image={cocktailRecipe}></ProjCard>
                 <ProjCard name='Modern Calculator' tech={['Js', 'React', 'Regex']} desc={modernCalc} url='https://dreamy-yalow-484b54.netlify.app/' image={calculatorProj}></ProjCard>
-                <ProjCard name='Herbal Therapy' tech={['Js', 'React', 'Css Keyframes', 'local data']} desc={aromatherapy} url='https://keen-poitras-6360a4.netlify.app/' image={aromatherapySite}></ProjCard>
+                <ProjCard name='Cocktail Recipe Finder' tech={['Js', 'React', 'fetch']} desc={cocktailFinder} url='https://suspicious-northcutt-b99321.netlify.app/' image={cocktailRecipe}></ProjCard>
+                {/* <ProjCard name='Herbal Therapy' tech={['Js', 'React', 'Css Keyframes', 'local data']} desc={aromatherapy} url='https://keen-poitras-6360a4.netlify.app/' image={aromatherapySite}></ProjCard> */}
                 <ProjCard name='Previous Portfolio' tech={['Js', 'React', 'Css Keyframes']} desc={oldPortDesc} url='https://hungry-benz-7536cf.netlify.app/' image={oldPortfolio}></ProjCard>
 
 

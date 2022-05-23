@@ -9,6 +9,31 @@ import './App.css';
 
 function App() {
 
+  window.addEventListener('load', () => {
+    let setActive = (btnName) => {
+      let navLink = document.querySelectorAll('.navLink');
+      navLink.forEach(el => {
+          el.classList.remove('activeBtn');
+          el.textContent === btnName && el.classList.add('activeBtn');
+      })
+    }
+
+    let url = window.location.href;
+        
+    let pagePath = url.slice(24);
+
+    switch(pagePath) {
+        case 'projects':
+            setActive('Projects');
+            break;
+        case 'about': 
+            setActive('About');
+            break;
+        default:
+            setActive('Home');
+            break;
+    }
+  })
   
 
   return (

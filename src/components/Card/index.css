@@ -6,7 +6,7 @@
     padding-bottom: 1rem;
     padding: 10px;
     border-radius: 15px;
-    border: 3px solid white;
+    border: 3px solid var(--currentText);
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -23,17 +23,17 @@
 
 .cardParent:hover {
     transform: scale(1.1) translateY(-20px);
-    border: 3px solid orange;
+    /* border: 3px solid var(--orange); */
     /* animation: wriggleAnim 1s ease-in-out; */
 }
 
 @keyframes SlideIn {
     0% {
-        transform: translateX(-500px) rotateX(0deg) rotateY(-30deg) ;
+        transform: scale(0.7) translateX(-100rem);
     }
 
     50% {
-        transform: translateX(0px) rotate(-30deg) ;
+        transform: scale(1);
     }
 
     
@@ -75,7 +75,7 @@
     width: 80%;
     height: auto;
     border-radius: 15px;
-    border: 3px solid var(--orange);
+    border: 3px solid var(--currentText);
 
 }
 
@@ -100,7 +100,7 @@
 
     .cardParent:hover {
         transform: none;
-        border: 3px solid white;
+        border: 3px solid var('--currentText');
         /* animation: wriggleAnim 1s ease-in-out; */
     }
 }
@@ -114,7 +114,7 @@
 
     .cardParent:hover {
         transform: none;
-        border: 3px solid white;
+        border: 3px solid var('--currentText');
         /* animation: wriggleAnim 1s ease-in-out; */
     }
 

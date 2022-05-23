@@ -1,5 +1,7 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom"
 import './index.css';
+import './darkModeToggle.css';
 
 import copyEmail from '../../utils/copyEmailToClipboard';
 
@@ -11,17 +13,44 @@ import instagram from '../../images/instaIcon.png'
 
 export const Nav = () => {
 
+
+    // ------------------ Dark Mode Toggle ------------------- //
+    
+
+    let darkModeToggle = () => {
+
+        // local storage checker for when site is opened is found in the html file changing styles according to the current
+        // light mode setting and another crossover is found in the initial index.css file with the body css selector.
+
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode === "dark") {
+            localStorage.lightMode = "light";
+            app.setAttribute("light-mode", "light");
+        } else {
+            localStorage.lightMode = "dark";
+            app.setAttribute("light-mode", "dark");
+        }
+
+        let root = document.querySelector(':root')
+        let gcs = getComputedStyle(root);
+        let BG = gcs.getPropertyValue('--currentBG');
+        let text = gcs.getPropertyValue('--currentText');
+        console.log(`text is ${text} \nBG is ${BG}`);
+
+        root.style.setProperty('--currentText', BG);
+        root.style.setProperty('--currentBG', text);
+    }
+
+    //  ----------------------- END Dark Mode Toggle -------------------------
+    
     window.addEventListener('DOMContentLoaded', () => {
-        let hamburgMenuEl = document.querySelector('.hamburgMenu');
-        let hamburgLines = document.querySelectorAll('.menuLine');
+        
         let navLink = document.querySelectorAll('.navLink');
-        let navLinkBlock = document.querySelector('.navLinkContainer');
-        let cover = document.querySelector('.cover');
-
+        
         let url = window.location.href;
-
+        
         console.log(url.slice(24))
-
+        
         let pagePath = url.slice(24);
 
         switch(pagePath) {
@@ -36,104 +65,22 @@ export const Nav = () => {
                 break;
         }
 
-
-
-        let closeMenu = () => {
-            let socialCont = document.querySelector('.socialLinks');
-            socialCont.style.display = 'none';
-            navLinkBlock.style.right = '-20rem';
-            cover.style.display=  'none';
-            hamburgLines.forEach((el, index) => {
-                el.style.borderColor = 'white';
-                switch (index) {
-                    case 0:
-                        el.style.transform = 'rotate(0deg) translateX(0px)';
-                        break;
-                    case 1:
-                        el.style.display = 'block';
-                        break;
-                    case 2:
-                        el.style.transform = 'rotate(0deg) translateX(0px)';
-
-                        break;
-                    default:
-                        break;
-                }
-            })
-        }
-
-        let openMenu = () => {
-            let socialCont = document.querySelector('.socialLinks');
-            socialCont.style.display = 'flex';
-            navLinkBlock.style.right = '0px';
-            navLinkBlock.style.display = 'block';
-            navLinkBlock.style.background = 'rgb(56, 52, 52)';
-            cover.style.display=  'block';
-            hamburgLines.forEach((el, index) => {
-                el.style.borderColor = 'white';
-                switch (index) {
-                    case 0:
-                        el.style.transform = 'rotate(45deg) translateX(5px)';
-
-                        break;
-                    case 1:
-                        el.style.display = 'none';
-                        break;
-                    case 2:
-                        el.style.transform = 'rotate(-45deg) translateX(4px)';
-
-                        break;
-                    default:
-                        break;
-                }
-            })
-        }
-
-        let menuOpen = false;
-
-        hamburgMenuEl.addEventListener('click', (e) => {
-            menuOpen = !menuOpen;
-            console.log('clicked')
-            if(menuOpen) {
-                openMenu()
-            } else {
-                closeMenu()
-            }
-        })
-
-        // let width = window.innerWidth;
-
-        //     if(width < 760) {
-        //         navLink.forEach(el => {
-        //             el.addEventListener('mouseup', () => {
-        //                 closeMenu()
-        //                 menuOpen = false;
-        //                 console.log('link clicked')
-        //             })
-        //         })
-    
-        //     } else {
-        //         navLinkBlock.style.display = 'block';
-                
-        //     }
+        
+        
         
         window.addEventListener('resize', () => {
             let width = window.innerWidth;
+            let navLinkBlock = document.querySelector('.navLinkContainer');
+
 
             if(width < 760) {
                 navLinkBlock.style.background = '#082032';
                 navLinkBlock.style.display = 'none';
                 let socialCont = document.querySelector('.socialLinks');
                 socialCont.style.display = 'none';
-                // closeMenu()
+                navLinkBlock.style.color = 'white';
 
-                navLink.forEach(el => {
-                    el.addEventListener('mouseup', () => {
-                        menuOpen = false;
-                        closeMenu();
-                        console.log('link clicked')
-                    })
-                })
+                // closeMenu()
             } else if(width > 760) {
                 navLinkBlock.style.background = 'none';
                 navLinkBlock.style.display = 'flex';
@@ -145,6 +92,93 @@ export const Nav = () => {
             }
         })
     })
+
+
+
+    let openMenu = () => {
+        let cover = document.querySelector('.cover');
+        let navLinkBlock = document.querySelector('.navLinkContainer');
+        let socialCont = document.querySelector('.socialLinks');
+        let hamburgLines = document.querySelectorAll('.menuLine');
+        let pageLinks = document.querySelectorAll('.linkTag');
+        let width = window.innerWidth;
+
+
+        if(width < 760) {
+            pageLinks.forEach((link) => {
+                if(!link.classList.contains('activeBtn')) {
+                    link.style.color = '#FFFFFF';
+                } else if(link.classList.contains('activeBtn')){
+                    link.style.color = 'var(--currentBG)';
+                }
+            })
+        }
+
+        socialCont.style.display = 'flex';
+        // navLinkBlock.style.color = 'white';
+        navLinkBlock.style.right = '0px';
+        navLinkBlock.style.display = 'block';
+        navLinkBlock.style.background = 'rgb(56, 52, 52)';
+        cover.style.display=  'block';
+        hamburgLines.forEach((el, index) => {
+            // el.style.borderColor = 'white';
+            switch (index) {
+                case 0:
+                    el.style.transform = 'rotate(45deg) translateX(5px)';
+
+                    break;
+                case 1:
+                    el.style.display = 'none';
+                    break;
+                case 2:
+                    el.style.transform = 'rotate(-45deg) translateX(4px)';
+
+                    break;
+                default:
+                    break;
+            }
+        })
+    }
+
+    let closeMenu = () => {
+        let hamburgLines = document.querySelectorAll('.menuLine');
+        let cover = document.querySelector('.cover');
+        let navLinkBlock = document.querySelector('.navLinkContainer');
+        let socialCont = document.querySelector('.socialLinks');
+        socialCont.style.display = 'none';
+        // navLinkBlock.style.color = 'var(--currentText)';
+        navLinkBlock.style.right = '-20rem';
+        cover.style.display=  'none';
+        hamburgLines.forEach((el, index) => {
+            // el.style.borderColor = 'white';
+            switch (index) {
+                case 0:
+                    el.style.transform = 'rotate(0deg) translateX(0px)';
+                    break;
+                case 1:
+                    el.style.display = 'block';
+                    break;
+                case 2:
+                    el.style.transform = 'rotate(0deg) translateX(0px)';
+
+                    break;
+                default:
+                    break;
+            }
+        })
+    }
+
+    let menuOpen = false;
+
+    let hamburgClickHandler = () => {
+        menuOpen = !menuOpen;
+        console.log('clicked')
+        if(menuOpen) {
+            openMenu()
+        } else {
+            closeMenu()
+        }
+    }
 
     const location = useLocation();
     let RedirectHome = () => {
@@ -158,20 +192,20 @@ export const Nav = () => {
 
     let setActive = (btnName) => {
         let navLink = document.querySelectorAll('.navLink');
-
         navLink.forEach(el => {
             el.classList.remove('activeBtn');
-            el.textContent === btnName && el.classList.add('activeBtn') 
-            console.log(el.textContent)
+            el.textContent === btnName && el.classList.add('activeBtn');
         })
 
     }
+
+    
 
     return (
         <div className="navBarParent fullWidth">
             <div className='navLogo' onClick={() => {RedirectHome();}}>
                 <div className='logo'></div>  
-                <p>Noel Williams</p>  
+                <p id='websiteTitle'>Noel Williams</p>  
             </div>
 
 
@@ -188,20 +222,23 @@ export const Nav = () => {
             <div className='navLinkContainer'>
                 <ul>
                     <li>
-                        <Link className='navLink' onClick={() => {setActive('Home')}} to="/">Home</Link>
-                    </li>
-                    {/* <li>
-                        <Link className='navLink'to="blog">Learner Blog</Link>
-                    </li> */}
-                    <li>
-                        <Link className='navLink' onClick={() => {setActive('About')}} to="about">About</Link>
+                        <Link className='navLink linkTag' onClick={() => {setActive('Home'); if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="/">Home</Link>
                     </li>
                     <li>
-                        <Link className='navLink' onClick={() => {setActive('Projects')}} to="projects">Projects</Link>
+                        <Link className='navLink linkTag' onClick={() => {setActive('About'); if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="about">About</Link>
+                    </li>
+                    <li>
+                        <Link className='navLink linkTag' onClick={() => {setActive('Projects'); if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="projects">Projects</Link>
+                    </li>
+                    <li>
+                        <button class="light-mode-button navLink linkTag"  onClick={() => {darkModeToggle()}}>
+	                        <span></span>
+	                        <span></span>
+	                    </button> 
                     </li>
                 </ul>
             </div>
-            <div className='hamburgMenu'>
+            <div className='hamburgMenu' onClick={() => hamburgClickHandler()}>
                 <div className='menuLine hamburgTop'></div>
                 <div className='menuLine hamburgMid'></div>
                 <div className='menuLine hamburgBottom'></div>

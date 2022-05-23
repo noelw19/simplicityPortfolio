@@ -37,6 +37,7 @@ export const Home = () => {
         iconContainer.addEventListener('mouseenter', () => {
             iconEl.forEach(val => {
                 val.style.animationPlayState = 'paused';
+
             })
         })
 
@@ -52,6 +53,7 @@ export const Home = () => {
                     if(val.classList.contains(key)) {
                         iconTipContainer.style.visibility = 'visible';
                         iconTipContainer.textContent = iconTip[key]
+                        
                     }
                 })
             })
@@ -59,15 +61,19 @@ export const Home = () => {
 
         iconEl.forEach(val => {
             val.addEventListener('mouseleave', (e) => {
-                iconTipContainer.textContent = '';
-                iconTipContainer.style.visibility = 'hidden';
+                setTimeout(() => {
+                    iconTipContainer.textContent = '';
+                    iconTipContainer.style.visibility = 'hidden';
+                }, 3000)
 
             })
         })
         
     }, [])
 
-    let HomeJSX = () => (
+    let bioText = 'let Noel = new Object();'
+
+    let HomeJSX = () => (    
         <div className='contentContainer'>
                 {/* <div className='topTitle'>
                     <h1 className='devTitle'>Web Developer</h1>
@@ -78,11 +84,11 @@ export const Home = () => {
                         <div className='image'></div>
                     </div>
                     <div className='bioText'>
-                        <p className='bText'>
-                            A programmer in the land of the long white cloud (New Zealand).
-                        </p>
-                        <p className='bText'>Programmer with 3-4 years experience, developing web apps, desktop apps with javascript, data visualisers with python and javascript, sudoku solver web app, basic smart contract development with the truffle suite, arduino projects in nodeJS with web socket functionality for frontend to send and manipulate the state within the arduino, I am also currently building a MERN stack app with auth0 authentication on the side to hone my nodeJs and mongodb skills.</p>
-                        <p className='bText'>I have a very deep curiousity about the world around me and I am grateful I have found programming because of the variety of things I have learnt because of it, the internet, everyday programs and how they work, electricity, energy, hardware coding with arduino, ethical hacking with capture the flag games to find ways to better protect my devices, programming has completely transformed my life and the way I think.</p>
+                        <p className='bText'>let Noel = new Object();</p>
+                        <p className='bText'>Noel.bio = "I have a passion for javascript, progressing my skills with this language for the past few years focussing mainly on understanding how to think about building different components, building a range of things from frontend applications, backend applications, desktop apps with electronJS, servers to run arduino projects and pass data to a frontend using web sockets, and building simple games.";</p>
+
+                        <p className='bText'>Noel.interests = ['Electronics', 'Arduino', 'Reading', 'Security', 'Linux', 'Still populating.....'];</p>
+
                     </div>
                     
                 </div>

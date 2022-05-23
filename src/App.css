@@ -31,4 +31,18 @@
 .emailText {
   position: absolute;
   left: -1000px;
+  top: -100px;
 }
+
+.darkMode {
+  background-color: #121212;
+  color: white;
+  border-color: white;
+}
+
+.lightMode {
+  background-color: white;
+  color: #121212;
+  border-color: #121212;
+}
+

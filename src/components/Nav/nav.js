@@ -43,10 +43,7 @@ export const Nav = () => {
 
     //  ----------------------- END Dark Mode Toggle -------------------------
     
-    window.addEventListener('DOMContentLoaded', () => {
-        
-        let navLink = document.querySelectorAll('.navLink');
-        
+    window.addEventListener('DOMContentLoaded', () => {        
         let url = window.location.href;
         
         console.log(url.slice(24))

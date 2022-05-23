@@ -71,8 +71,6 @@ export const Home = () => {
         
     }, [])
 
-    let bioText = 'let Noel = new Object();'
-
     let HomeJSX = () => (    
         <div className='contentContainer'>
                 {/* <div className='topTitle'>

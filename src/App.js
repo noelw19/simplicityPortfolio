@@ -23,7 +23,7 @@ function App() {
 
     let url = window.location.href;
         
-    let pagePath = url.slice(31);
+    let pagePath = url.slice(32);
     console.log(pagePath, 'this one');
 
     switch(pagePath) {

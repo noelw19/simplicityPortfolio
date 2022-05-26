@@ -12,7 +12,7 @@ export const Projects = () => {
     let modernCalc = 'A calculator that takes sentences and extracts the embedded numbers on either side of an operator (i.e: +, -, *, /) using regex and shows the result in the right pane, also with a copy button that copies the sentence and the result in a prettier format on to the clipboard. Made for note taking to better remember the whole equation.';
     let cocktailFinder = 'A cocktail recipe finder, that usilizes the cocktail DB api, and a simple website to display the data and a searchbar that searches for ingredients and spirits.'
     let sudokuSolverDesc = 'A sudoku solver I built by checking each value within the 2D array, grabbing the next null value and all of the possibilities are tried for that place and sequencially pushed to an array, if a null value is found that possibility is discarded and the first possibility with no null values is found it is then returned and rendered in the UI. '
-    let PSRDesc = 'Built a paper, scissors, rock to work on my typescript, used enumerators to hold the gameResults and the choice of weapon for the round, used the useState hook to hold the score state and after at 10 points a winner is decided.'
+    let PSRDesc = 'Built a paper, scissors, rock game to work on my typescript, used enumerators to hold the gameResults and the choice of weapon for the round, used the useState hook to hold the score state and after at 10 points a winner is decided.'
 
     return (
         <div className='routedPageContainer flexCenter'>

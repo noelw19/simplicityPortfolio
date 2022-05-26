@@ -13,7 +13,7 @@ function App() {
     const e = event || window.event;
     // Cancel the event
     e.preventDefault();
-    window.location.href('www.noel-williams.com');
+    window.location.href ='www.noel-williams.com';
     if (e) {
       e.returnValue = ''; // Legacy method for cross browser support
     }

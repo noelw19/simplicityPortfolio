@@ -28,12 +28,15 @@ function App() {
 
     switch(pagePath) {
         case '/projects':
+            console.log(pagePath, 'this one', 'on proj');
             setActive('Projects');
             break;
         case '/about': 
+            console.log(pagePath, 'this one', 'on about');
             setActive('About');
             break;
         case '/':
+            console.log(pagePath, 'this one', 'on home');
             setActive('Home');
             break;
         default: 

@@ -24,7 +24,7 @@ function App() {
     let url = window.location.href;
         
     let pagePath = url.slice(31);
-    console.log(pagePath);
+    console.log(pagePath, 'this one');
 
     switch(pagePath) {
         case 'projects':

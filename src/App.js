@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
 
-  window.addEventListener('load', () => {
+  window.addEventListener('DOMContentLoaded', () => {
     let setActive = (btnName) => {
       let navLink = document.querySelectorAll('.navLink');
       navLink.forEach(el => {

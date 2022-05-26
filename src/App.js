@@ -23,7 +23,7 @@ function App() {
 
     let url = window.location.href;
         
-    let pagePath = url.slice(24);
+    let pagePath = url.slice(31);
 
     switch(pagePath) {
         case 'projects':

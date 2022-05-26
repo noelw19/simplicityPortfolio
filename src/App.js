@@ -5,19 +5,21 @@ import { Projects } from './views/Projects/projects.js'
 // import { LearnerBlog } from './views/LearningBlog/lBlog.js';
 import {Nav} from './components/Nav/nav.js'
 
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
 
-  window.onbeforeunload = (event) => {
-    const e = event || window.event;
-    // Cancel the event
+  useEffect(() => {
+    window.addEventListener("beforeunload", alertUser);
+    return () => {
+      window.removeEventListener("beforeunload", alertUser);
+    };
+  }, []);
+  const alertUser = (e) => {
     e.preventDefault();
-    window.location.href ='www.noel-williams.com';
-    if (e) {
-      e.returnValue = ''; // Legacy method for cross browser support
-    }
-    return ''; // Legacy method for cross browser support
+    // e.returnValue = "";
+    window.location.href = 'www.noel-williams.com'
   };
   
 

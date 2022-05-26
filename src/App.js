@@ -33,9 +33,11 @@ function App() {
         case 'about': 
             setActive('About');
             break;
-        default:
+        case 'home':
             setActive('Home');
             break;
+        default: 
+          break;
     }
   })
   

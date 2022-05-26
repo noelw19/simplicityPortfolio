@@ -5,22 +5,9 @@ import { Projects } from './views/Projects/projects.js'
 // import { LearnerBlog } from './views/LearningBlog/lBlog.js';
 import {Nav} from './components/Nav/nav.js'
 
-import { useEffect } from 'react';
 import './App.css';
 
 function App() {
-
-  useEffect(() => {
-    window.addEventListener("beforeunload", alertUser);
-    return () => {
-      window.removeEventListener("beforeunload", alertUser);
-    };
-  }, []);
-  const alertUser = (e) => {
-    e.preventDefault();
-    // e.returnValue = "";
-    window.location.href = 'www.noel-williams.com'
-  };
   
 
   window.addEventListener('DOMContentLoaded', () => {

@@ -9,6 +9,18 @@ import './App.css';
 
 function App() {
 
+  window.onbeforeunload = (event) => {
+    const e = event || window.event;
+    // Cancel the event
+    e.preventDefault();
+    window.location.href('www.noel-williams.com');
+    if (e) {
+      e.returnValue = ''; // Legacy method for cross browser support
+    }
+    return ''; // Legacy method for cross browser support
+  };
+  
+
   window.addEventListener('DOMContentLoaded', () => {
     let setActive = (btnName) => {
       let navLink = document.querySelectorAll('.navLink');
@@ -17,6 +29,8 @@ function App() {
           el.textContent === btnName && el.classList.add('activeBtn');
       })
     }
+
+    
 
     let url = window.location.href;
         

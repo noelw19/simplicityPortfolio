@@ -16,7 +16,7 @@ export const About = () => {
                             <p className='whoami1' style={{paddingLeft: '10px'}}>Noel.born = 'Port Moresby, Papua New Guinea.';</p>
                             <p className='whoami1' style={{paddingLeft: '10px'}}>Noel.location = 'Wellington, NZ';</p>
                             <p className='whoami1' style={{paddingLeft: '10px'}}>
-                                Noel.favouriteQuote = '"The only person you are destined to become is the person you decide to be." - Ralph Waldo Emerson';
+                                Noel.favouriteQuote = 'The only person you are destined to become is the person you decide to be." - Ralph Waldo Emerson';
                             </p>
                             <p className='whoami1' style={{paddingLeft: '10px'}}>
                                 Noel.currentFavouriteMovie = 'The boy who harnessed the wind.';

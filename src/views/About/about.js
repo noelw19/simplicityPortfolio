@@ -16,7 +16,7 @@ export const About = () => {
                             <p className='whoami1' style={{paddingLeft: '10px'}}>Noel.born = 'Port Moresby, Papua New Guinea.';</p>
                             <p className='whoami1' style={{paddingLeft: '10px'}}>Noel.location = 'Wellington, NZ';</p>
                             <p className='whoami1' style={{paddingLeft: '10px'}}>
-                                Noel.favouriteQuote = 'Try not to become a man of success, but rather try to become a man of value. He is considered successful in our day who gets more out of life than he puts in. But a man of value will give more than he receives.';
+                                Noel.favouriteQuote = '"The only person you are destined to become is the person you decide to be." - Ralph Waldo Emerson';
                             </p>
                             <p className='whoami1' style={{paddingLeft: '10px'}}>
                                 Noel.currentFavouriteMovie = 'The boy who harnessed the wind.';

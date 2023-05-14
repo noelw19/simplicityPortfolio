@@ -1,5 +1,5 @@
 .cardParent {
-    width: 18%;
+    width: 40%;
     margin: 1rem;
     background: var(--orange);
     padding-top: 0.2rem;
@@ -10,7 +10,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items: center;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);

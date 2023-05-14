@@ -216,9 +216,9 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: url('../../images/profilePic') no-repeat;
+    background: url('../../images/profilePic.jpg') no-repeat;
     background-size: cover;
-    background-position: 50% 20%;
+    background-position: 0% 20%;
     border: 4px solid var(--currentText);
     animation: GrowIn 3s;
 }

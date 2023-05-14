@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom"
+import { NavLink, Link, useLocation } from "react-router-dom"
 import './index.css';
 import './darkModeToggle.css';
 
@@ -35,7 +35,6 @@ export const Nav = () => {
         let gcs = getComputedStyle(root);
         let BG = gcs.getPropertyValue('--currentBG');
         let text = gcs.getPropertyValue('--currentText');
-        console.log(`text is ${text} \nBG is ${BG}`);
 
         root.style.setProperty('--currentText', BG);
         root.style.setProperty('--currentBG', text);
@@ -45,23 +44,23 @@ export const Nav = () => {
     
     window.addEventListener('DOMContentLoaded', () => {
         
-        let url = window.location.href;
+        // let url = window.location.href;
         
-        console.log(url.slice(24))
+        // console.log(url.slice(24))
         
-        let pagePath = url.slice(24);
+        // let pagePath = url.slice(24);
 
-        switch(pagePath) {
-            case 'projects':
-                setActive('Projects');
-                break;
-            case 'About': 
-                setActive('About');
-                break;
-            default:
-                setActive('Home');
-                break;
-        }
+        // switch(pagePath) {
+        //     case 'projects':
+        //         setActive('Projects');
+        //         break;
+        //     case 'About': 
+        //         setActive('About');
+        //         break;
+        //     default:
+        //         setActive('Home');
+        //         break;
+        // }
 
         
         
@@ -170,7 +169,7 @@ export const Nav = () => {
 
     let hamburgClickHandler = () => {
         menuOpen = !menuOpen;
-        console.log('clicked')
+        // console.log('clicked')
         if(menuOpen) {
             openMenu()
         } else {
@@ -183,19 +182,19 @@ export const Nav = () => {
         console.log(location.pathname)
         if(location.pathname !== '/') {window.location.href = '/';}
         else {
-            console.log('already on home')
+            // console.log('already on home')
 
         }
     }
 
-    let setActive = (btnName) => {
-        let navLink = document.querySelectorAll('.navLink');
-        navLink.forEach(el => {
-            el.classList.remove('activeBtn');
-            el.textContent === btnName && el.classList.add('activeBtn');
-        })
+    // let setActive = (btnName) => {
+    //     let navLink = document.querySelectorAll('.navLink');
+    //     navLink.forEach(el => {
+    //         el.classList.remove('activeBtn');
+    //         el.textContent === btnName && el.classList.add('activeBtn');
+    //     })
 
-    }
+    // }
 
     
 
@@ -220,16 +219,16 @@ export const Nav = () => {
             <div className='navLinkContainer'>
                 <ul>
                     <li>
-                        <Link className='navLink linkTag' onClick={() => {setActive('Home'); if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="/">Home</Link>
+                        <NavLink className={({ isActive }) => (isActive ? "navLink linkTag activeBtn" : "navLink linkTag")} onClick={() => { if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="/">Home</NavLink>
                     </li>
                     <li>
-                        <Link className='navLink linkTag' onClick={() => {setActive('About'); if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="about">About</Link>
+                        <NavLink className={({ isActive }) => (isActive ? "navLink linkTag activeBtn" : "navLink linkTag")} onClick={() => { if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="about">About</NavLink>
                     </li>
                     <li>
-                        <Link className='navLink linkTag' onClick={() => {setActive('Projects'); if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="projects">Projects</Link>
+                        <NavLink className={({ isActive }) => (isActive ? "navLink linkTag activeBtn" : "navLink linkTag")} onClick={() => {if(window.innerWidth < 760) {menuOpen = false; closeMenu();}}} to="projects">Projects</NavLink>
                     </li>
                     <li>
-                        <button class="light-mode-button navLink linkTag"  onClick={() => {darkModeToggle()}}>
+                        <button className="light-mode-button navLink linkTag"  onClick={() => {darkModeToggle()}}>
 	                        <span></span>
 	                        <span></span>
 	                    </button> 

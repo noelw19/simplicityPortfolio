@@ -27,7 +27,7 @@ export const Home = () => {
             setTimeout(() => {
                 bioTextElements[i].style.visibility = 'visible';
                 bioTextElements[i].classList.add('shuffleToLeft')
-                console.log(bioTextElements[i]);
+                // console.log(bioTextElements[i]);
             }, 1000)
         }
 
@@ -83,9 +83,10 @@ export const Home = () => {
                     </div>
                     <div className='bioText'>
                         <p className='bText'>let Noel = new Object();</p>
-                        <p className='bText'>Noel.bio = "I have a passion for javascript, progressing my skills with this language for the past few years focussing mainly on understanding how to think about building different components, building a range of things from frontend applications, backend applications, desktop apps with electronJS, servers to run arduino projects and pass data to a frontend using web sockets, and building simple games.";</p>
+                        <p className='bText'>Noel.bio = "I am a software developer who loves to build practical projects using Javascript and Python. Whether it's building websites, servers, or programming sensors, I enjoy creating solutions that solve problems in my daily life.<br/><br/>
+When I'm not coding, you can find me practicing Muay Thai. I believe in the power of hard work and persistence, which is why I'm committed to delivering innovative solutions that make a difference. I'm excited to continue developing my skills and exploring new areas of interest in the world of programming.";</p>
 
-                        <p className='bText'>Noel.interests = ['Electronics', 'Arduino', 'Reading', 'Security', 'Linux', 'Still populating.....'];</p>
+                        <p className='bText'>Noel.interests = ['Electronics', 'Arduino', 'Javascript', 'NodeJs', 'Reading', 'Security', 'Linux', 'Still populating.....'];</p>
 
                     </div>
                     

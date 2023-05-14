@@ -1,11 +1,16 @@
 let copyEmail = () => {
-    let textArea = document.getElementsByClassName('emailText')[0]
-    // navigator.clipboard.writeText(textArea.textContent);
-    // alert(textArea.textContent + ' copied to the clipboard!')
-    textArea.focus();
-    textArea.select();
-   document.execCommand('copy');
-   alert("Email copied!!")
+   const copyContent = async () => {
+    let text = document.getElementsByClassName('emailText')[0].value;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      alert('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+  copyContent()
+
 }
 
 export default copyEmail;
